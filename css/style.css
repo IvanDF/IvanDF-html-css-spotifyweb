@@ -9,6 +9,11 @@
   box-sizing: border-box;
 }
 
+/* DEBUG */
+.box {
+  background: #fff;
+}
+
 /* APP */
 
 .app {
@@ -36,7 +41,12 @@
 .menu-left-nav {
   flex-grow: 1;
   background: red;
+}
 
+.menu-left-nav .box {
+  margin: 20px 0;
+  height: 80px;
+  width: 100%;
 }
 
 .menu-left-login {
@@ -49,4 +59,15 @@
 .player {
   height: 100px;
   background: #000;
+}
+
+/* MEDIA QUERY */
+/* SMARTPHONE */
+@media screen and (max-width: 600px){
+
+  /* ASIDE */
+  .menu-left {
+    flex-basis: 60px
+  }
+
 }
