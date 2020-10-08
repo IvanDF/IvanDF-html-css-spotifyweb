@@ -18,8 +18,30 @@
   background: #ccc;
 }
 
+/* MAIN */
+
 .main-content {
-  flex-grow: 1
+  flex-grow: 1;
+  display: flex;
+}
+
+/* ASIDE */
+
+.menu-left {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 250px;
+}
+
+.menu-left-nav {
+  flex-grow: 1;
+  background: red;
+
+}
+
+.menu-left-login {
+  height: 100px;
+  background: green;
 }
 
 /* FOOTER */
