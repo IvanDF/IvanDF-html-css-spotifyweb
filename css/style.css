@@ -14,18 +14,16 @@
   background: #fff;
 }
 
-/* APP */
-
-.app {
+body {
   display: flex;
   flex-direction: column;
   height: 100vh;
   background: #ccc;
 }
 
-/* MAIN */
+/* APP */
 
-.main-content {
+.app {
   flex-grow: 1;
   display: flex;
 }
@@ -54,11 +52,58 @@
   background: green;
 }
 
+/* MAIN CONTENT */
+.main-content {
+  position: relative;
+  background: darkorange;
+  flex-grow: 1;
+}
+
+/* UPGRADE */
+
+.upgrade {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: rgba(0, 0, 0, .5);
+}
+
+.upgrade-button {
+  align-self: center;
+  padding: 20px;
+  margin-right: 20px;
+  background: #ddd;
+}
+
+/* SCROLLABLE CONTENT */
+
+.scrollable-content {
+  border: solid blue 5px;
+  padding: 110px 20px 20px;
+  height: 100%;
+  width: 100%;
+}
+
+.navbar {
+  background: #ddd;
+  padding: 20px;
+  text-align: center;
+}
+
 /* FOOTER */
 
 .player {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
   height: 100px;
   background: #000;
+  color: #fff;
 }
 
 /* MEDIA QUERY */
