@@ -9,12 +9,9 @@
   box-sizing: border-box;
 }
 
-/* DEBUG */
-.box {
-  background: #fff;
-}
-
 body {
+  font-family: monospace;
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -37,26 +34,32 @@ body {
 }
 
 .menu-left-nav {
+  padding: 15px;
   flex-grow: 1;
-  background: red;
+  background: #444;
+  color: #fff;
 }
 
-.menu-left-nav .box {
+.menu-left-nav .logo {
+  margin-bottom: 50px;
+}
+
+.menu-left-nav li {
+  list-style:none;
   margin: 20px 0;
-  height: 80px;
-  width: 100%;
 }
 
 .menu-left-login {
+  padding: 15px;
   height: 100px;
-  background: green;
+  background: #666;
 }
 
 /* MAIN CONTENT */
 
 .main-content {
   position: relative;
-  background: darkorange;
+  background: #446;
   flex-grow: 1;
 }
 
@@ -88,7 +91,6 @@ body {
   top: 0;
   left: 0;
   overflow-y: auto;
-  border: solid blue 5px;
   padding: 110px 20px 20px;
   height: 100%;
   width: 100%;
@@ -96,7 +98,7 @@ body {
 
 /* MUSIC NAVBAR */
 
-.navbar {
+.musics-navbar {
   background: #ddd;
   padding: 20px;
   text-align: center;
@@ -104,22 +106,30 @@ body {
 
 /* MUSIC ROW */
 
-.music-row {
+.musics-row {
   margin: 20px 0;
   width: 100%;
-  background: rgba(255, 255, 255, .7);
+  color: #fff;
 }
 
-.music-box {
+.musics-row-title {
+  margin-left: 10px;
+}
+
+.musics-box {
   display: flex;
   flex-wrap: wrap;
 }
 
-.music-item {
+.musics-item {
   height: 250px;
   width: calc((100% / 6) - 20px);
   margin: 10px;
-  border: solid 1px #000;
+  border: solid 3px #777;
+}
+
+.musics-item.rounded {
+  border-radius: 50%
 }
 
 /* FOOTER */
@@ -138,7 +148,7 @@ body {
 /* TABLET */
 @media screen and (max-width: 1024px) {
 
-  .music-item {
+  .musics-item {
     width: calc((100% / 4) - 20px);
   }
 
@@ -151,5 +161,10 @@ body {
   .menu-left {
     flex-basis: 60px
   }
+
+  .musics-item {
+    width: calc((100% / 2) - 20px);
+  }
+
 
 }
