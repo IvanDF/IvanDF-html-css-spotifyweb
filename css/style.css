@@ -1,0 +1,30 @@
+/****************************
+ * GENERAL SETTINGS
+ * DESKTOP FIRST
+****************************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* APP */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #ccc;
+}
+
+.main-content {
+  flex-grow: 1
+}
+
+/* FOOTER */
+
+.player {
+  height: 100px;
+  background: #000;
+}
