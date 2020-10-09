@@ -12,6 +12,7 @@
 
 body {
   font-family: 'Lato', sans-serif;
+  color: rgba(153, 153, 153, .7);
 }
 
 /* TYPOGRAPHY */
@@ -25,7 +26,6 @@ h5 {
 
 h2 {
   font-size: 28px;
-  margin-bottom: 30px;
 }
 
 h4 {
@@ -43,6 +43,11 @@ a {
   font-size: 14px;
   text-decoration: none;
   color: rgba(153, 153, 153, .7);
+  transition: color .5s;
+}
+
+a:hover {
+  color: #fff;
 }
 
 /* UTILITIES */
@@ -75,14 +80,6 @@ ul.v-list {
 
 ul.v-list li {
   margin: 5px 0;
-}
-
-a:hover {
-  color: #fff;
-}
-
-.d-flex {
-  display: flex;
 }
 
 .d-flex.vertical-center {
@@ -165,7 +162,7 @@ a:hover {
 }
 
 .navbar-left-menu ul li {
-  border-left: solid 4px;
+  border-left: solid 4px transparent;
 }
 
 .navbar-left-menu ul li.active {
@@ -181,36 +178,31 @@ a:hover {
 }
 
 .navbar-left-menu ul img {
+  display: inline-block;
+  vertical-align: middle;
   width: 30px;
   margin-right: 10px;
 }
 
-.navbar-left-menu .nav {
-  line-height: 30px;
-}
-
 .navbar-left-menu .nav span {
-  position: relative;
-  bottom: 8px;
+  display: inline-block;
+  vertical-align: middle;
 }
-
 
 /* NAVBAR LEFT USER */
 
 .navbar-left-user {
-  flex-basis: 80px;
   padding: 20px 20px 0;
 }
 
 .navbar-left-user i {
-  color: rgba(153, 153, 153, .7);
   margin-right: 5px;
 }
 
 .navbar-left-user .install {
   padding-bottom: 15px;
-  display: flex;
-  align-items: center;
+  text-align: center;
+  display: inline-block;
 }
 
 .navbar-left-user .user {
@@ -221,14 +213,17 @@ a:hover {
 }
 
 .navbar-left-user .user img {
-  width: 25px;
-  height: 25px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 35px;
+  height: 35px;
   margin-right: 10px;
   background: #999;
-  border-radius: 50%
+  border-radius: 50%;
 }
 
 .navbar-left-user .user h6 {
+  display: inline-block;
   color: #fff;
   font-size: 15px;
 }
@@ -286,14 +281,19 @@ a:hover {
 }
 
 .albums-row {
+  margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
 }
 
 .albums-item {
   width: calc((100% / 6) - 20px);
-  margin:10px;
+  margin: 10px;
   cursor: pointer;
+}
+
+.albums-item:first-child {
+  margin-left: 0;
 }
 
 .albums-item.rounded img {
@@ -335,16 +335,25 @@ a:hover {
 }
 
 .albums-item p {
-  color: rgba(153, 153, 153, .7);
   font-size: 12px;
 }
 
 /* FOOTER */
 
+.player i {
+  font-size: 18px;
+}
+
+.player h4 {
+  margin-bottom: 0;
+}
+
 .player h4 a {
   color: #fff;
-  font-size: 12px;
+  font-size: 14px;
 }
+
+/* PLAYER */
 
 .player {
   display: flex;
@@ -373,7 +382,7 @@ a:hover {
 }
 
 .player-song .song-txt {
-  line-height: 0px;
+  line-height: 14px;
 }
 
 .player-song .song-txt a:hover {
@@ -381,19 +390,22 @@ a:hover {
 }
 
 .player-song .song-txt span a {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .player-song .options {
   justify-content: flex-end;
+  flex-grow: 1;
+  display: flex;
 }
 
 .player-song .options ul li {
   padding-left: 15px;
 }
 
-.player-song .options ul i {
-  font-size: 16px;
+.player-song .options ul i:active {
+  font-weight: bold;
+  color: #81b71a;
 }
 
 /* PLAYER CONTROLS */
@@ -406,28 +418,37 @@ a:hover {
 }
 
 .player-controls a {
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 .player-controls i {
-  font-size: 20px;
   color: #fff;
+  transition: transform .5s;
 }
 
 .player-controls .play-pause i {
   font-size: 32px;
+  padding: 0 20px;
 }
 
-.player-controls-bar {
+.player-controls i:hover {
+  transform: scale(1.15);
+}
+
+.player-controls .play-pause i:hover {
+  transform: scale(1.2);
+}
+
+.player-controls-time {
   width: 100%;
   color: #fff;
   margin-top: 15px;
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
 }
 
-.player-controls-bar span {
+.player-controls-time span {
   font-size: 14px;
 }
 
@@ -436,6 +457,36 @@ a:hover {
   height: 4px;
   border-radius: 2px;
   cursor: pointer;
+}
+
+[class*="-bar"]::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 4px;
+  border-radius: 2px;
+  background: #fff;
+  transition: background .5s
+}
+
+[class*="-bar"]::after {
+  content: '';
+  position: absolute;
+  transform: scale(0);
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  background: #fff;
+  transition: .4s
+}
+
+[class*="-bar"]:hover::after {
+  left: 30%;
+  top: -3px;
+  width: 10px;
+  height: 10px;
+  transform: scale(1);
 }
 
 .music-bar,
@@ -448,26 +499,12 @@ a:hover {
   margin: 0 20px;
 }
 
-.music-bar:hover::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 120px;
-  height: 4px;
-  border-radius: 2px;
-  background: #81b71a;
+.music-bar::before {
+  width: 30%;
 }
 
-.music-bar:hover::after {
-  content: '';
-  position: absolute;
-  left: 118px;
-  top: -3px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #fff;
+.music-bar:hover::before {
+  background: #81b71a;
 }
 
 /* PLAYER VOLUME */
@@ -480,7 +517,6 @@ a:hover {
 
 .player-volume i {
   color: #fff;
-  font-size: 16px;
   margin-right: 15px;
 }
 
@@ -489,26 +525,18 @@ a:hover {
   margin-right: 20px;
 }
 
+.volume-bar::before {
+  width: 10%;
+  background: #fff;
+}
+
 .volume-bar:hover::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 30px;
-  height: 4px;
-  border-radius: 2px;
   background: #81b71a;
 }
 
 .volume-bar:hover::after {
-  content: '';
-  position: absolute;
-  left: 28px;
+  left: 10%;
   top: -3px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #fff;
 }
 
 
@@ -516,10 +544,43 @@ a:hover {
 /* TABLET */
 @media screen and (max-width: 1024px) {
 
+  /* GENERAL SETTINGS */
+
+  /* TYPOGRAPHY */
+
+  h2 {
+    font-size: 26px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
   /* SCROLLABLE CONTENT */
 
   .albums-item {
     width: calc((100% / 4) - 20px);
+  }
+
+  /* PLAYER */
+
+  .player i {
+    font-size: 14px;
+  }
+
+  .player-controls .play-pause i {
+    font-size: 32px;
+    padding: 0 10px;
+  }
+
+  .player-volume i {
+    color: #fff;
+    margin-right: 10px;
+  }
+
+  .volume-bar {
+    width: 80px;
+    margin-right: 20px;
   }
 
 }
@@ -537,31 +598,26 @@ a:hover {
     flex-basis: 60px
   }
 
-  .navbar-left-menu .nav span {
-    display: none;
-  }
-
-  .navbar-left-menu .playlist {
+  .navbar-left-menu .nav span,
+  .navbar-left-menu h5,
+  .navbar-left-menu .playlist,
+  .navbar-left-user span,
+  .navbar-left-user h6,
+  .navbar-left-menu .navbar-logo.desktop {
     display: none;
   }
 
   .navbar-left-user {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
   }
 
   .navbar-left-user .user {
     border-top: none;
   }
 
-  .navbar-left-user span,
-  .navbar-left-user h6 {
-    display: none;
-  }
-
-  .navbar-left-menu .navbar-logo.desktop {
-    display: none;
+  .navbar-left-user .user img {
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 
   .navbar-left-menu .navbar-logo.mobile {
