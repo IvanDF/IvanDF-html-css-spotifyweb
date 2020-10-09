@@ -70,6 +70,29 @@ a:hover {
   display: flex;
 }
 
+.d-flex.vertical-center {
+  align-items: center;
+}
+
+/* BUTTONS */
+
+.btn {
+  cursor: pointer;
+  border: 1px solid transparent;
+  padding: 15px 40px;
+}
+
+.btn-outline {
+  border-radius: 40px;
+  color: #fff;
+  border:solid 1px;
+  transition: transform .3s;
+}
+
+.btn-outline:hover {
+  transform: scale(1.1);
+}
+
 /* APP */
 
 .app {
@@ -182,6 +205,27 @@ a:hover {
 .navbar-left-user .user h6 {
   color: #fff;
   font-size: 15px;
+}
+
+/* SCROLLABLE WINDOW */
+
+.scrollable-container {
+  position: relative;
+  flex-grow: 1;
+}
+
+.scrollable-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items:center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100px;
+  width: 100%;
+  padding-right: 20px;
+  background: rgba(0, 0, 0, .5);
 }
 
 /* FOOTER */
