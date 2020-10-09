@@ -189,6 +189,11 @@ a:hover {
   line-height: 30px;
 }
 
+.navbar-left-menu .nav span {
+  position: relative;
+  bottom: 8px;
+}
+
 
 /* NAVBAR LEFT USER */
 
@@ -334,8 +339,6 @@ a:hover {
   font-size: 12px;
 }
 
-
-
 /* FOOTER */
 
 .player h4 a {
@@ -370,7 +373,7 @@ a:hover {
 }
 
 .player-song .song-txt {
-  line-height: 10px;
+  line-height: 0px;
 }
 
 .player-song .song-txt a:hover {
