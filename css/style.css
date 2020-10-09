@@ -51,6 +51,15 @@ ul.h-list {
   list-style: none
 }
 
+ul.h-list.center {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+ul.h-list.center li {
+  margin: 10px 20px;
+}
+
 ul.v-list {
   display: flex;
   flex-direction: column;
@@ -227,6 +236,35 @@ a:hover {
   padding-right: 20px;
   background: rgba(0, 0, 0, .5);
 }
+
+/* SCROLLABLE CONTENT */
+
+.scrollable-content {
+  position: absolute;
+  padding: 110px 20px 20px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.music-navbar a {
+  position: relative;
+}
+
+.music-navbar a.active::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
+  height: 3px;
+  width: 40%;
+  background: #81b71a;
+}
+
+
 
 /* FOOTER */
 
