@@ -11,8 +11,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <!-- FONT AWESOME -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-  <!-- UTILITIES -->
-  <link rel="stylesheet" href="./css/utilities.css">
   <!-- MAIN STYLE -->
   <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -20,7 +18,79 @@
   <!-- APPLICATION -->
   <main class="app">
     <!-- MAIN WINDOW -->
-    <section class="main-window"></section>
+    <section class="main-window">
+      <!-- NAVBAR LEFT -->
+      <aside class="navbar-left">
+        <div class="navbar-left-menu">
+          <img class="navbar-logo desktop" src="./img/icons/logo/logo.svg" alt="">
+          <img class="navbar-logo mobile" src="./img/icons/logo/logo-small.svg" alt="">
+          <ul class="v-list nav">
+            <li class="active">
+              <a class="d-flex" href="#">
+                <img src="./img/icons/left-nav/home.svg" alt="">
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex" href="#">
+                <img src="./img/icons/left-nav/search.svg" alt="">
+                <span>Cerca</span>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex" href="#">
+                <img src="./img/icons/left-nav/libreria.svg" alt="">
+                <span>La tua libreria</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="v-list playlist">
+            <h5>Playlist</h5>
+            <li>
+              <i class="fas fa-plus"></i>
+              <a href="#">
+                Crea Playlist
+              </a>
+            </li>
+            <li>
+              <a href="#"> Nome Playlist </a>
+            </li>
+            <li>
+              <a href="#"> Nome Playlist </a>
+            </li>
+            <li>
+              <a href="#"> Nome Playlist </a>
+            </li>
+            <li>
+              <a href="#"> Nome Playlist </a>
+            </li>
+            <li>
+              <a href="#"> Nome Playlist </a>
+            </li>
+            <li>
+              <a href="#"> Nome Playlist </a>
+            </li>
+            <li>
+              <a href="#"> Nome Playlist </a>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-left-user">
+          <div class="install">
+            <a href="#">
+              <i class="far fa-arrow-alt-circle-down"></i>
+              <span>Installa app</span>
+            </a>
+          </div>
+          <div class="user">
+            <a class="d-flex vertical-center" href="#">
+              <img src="./img/icons/left-nav/profile.svg" alt="">
+              <h6>John Wick</h6>
+            </a>
+          </div>
+        </div>
+      </aside>
+    </section>
     <!-- PLAYER -->
     <footer class="player">
       <!-- PLAYER SONG -->

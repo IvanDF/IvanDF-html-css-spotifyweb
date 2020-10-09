@@ -32,7 +32,9 @@ h4 {
 
 h5 {
   font-size: 16px;
+  color: #fff;
   text-transform: uppercase;
+  margin-bottom: 5px;
 }
 
 a {
@@ -41,14 +43,31 @@ a {
   color: rgba(153, 153, 153, .7);
 }
 
+/* UTILITIES */
+
 ul.h-list {
   display: flex;
   align-items: center;
   list-style: none
 }
 
+ul.v-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 20px 0;
+}
+
+ul.v-list li {
+  margin: 5px 0;
+}
+
 a:hover {
   color: #fff;
+}
+
+.d-flex {
+  display: flex;
 }
 
 /* APP */
@@ -59,9 +78,110 @@ a:hover {
   flex-direction: column;
 }
 
+/* MAIN WINDOW */
+
 .main-window {
   flex-grow: 1;
+  display: flex;
   background: #141921;
+}
+
+/* NAVBAR LEFT */
+
+.navbar-left {
+  display: flex;
+  flex-basis: 230px;
+  flex-direction: column;
+  padding-top: 20px;
+  background: #000;
+}
+
+/* NAVBAR LEFT MENU */
+
+.navbar-left-menu {
+  flex-grow: 1;
+}
+
+.navbar-left-menu h5 {
+  margin-left: 20px;
+}
+
+.navbar-left-menu .navbar-logo {
+  margin-left: 20px;
+  max-width: 130px;
+}
+
+.navbar-left-menu .navbar-logo.mobile {
+  height: 40px;
+  display: none;
+}
+
+.navbar-left-menu ul li {
+  padding: 0 20px;
+}
+
+.navbar-left-menu ul li {
+  border-left: solid 4px;
+}
+
+.navbar-left-menu ul li.active {
+  border-color: #81b71a;
+}
+
+.navbar-left-menu ul li .fa-plus {
+  background: #fff;
+  color: #000;
+  font-size: 20px;
+  padding: 10px;
+  margin-right: 5px;
+}
+
+.navbar-left-menu ul img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.navbar-left-menu .nav {
+  line-height: 30px;
+}
+
+
+/* NAVBAR LEFT USER */
+
+.navbar-left-user {
+  flex-basis: 80px;
+  padding: 20px 20px 0;
+}
+
+.navbar-left-user i {
+  color: rgba(153, 153, 153, .7);
+  margin-right: 5px;
+}
+
+.navbar-left-user .install {
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-left-user .user {
+  display: flex;
+  align-items: center;
+  border-top: solid 1px #999;
+  padding: 15px 0 10px;
+}
+
+.navbar-left-user .user img {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  background: #999;
+  border-radius: 50%
+}
+
+.navbar-left-user .user h6 {
+  color: #fff;
+  font-size: 15px;
 }
 
 /* FOOTER */
@@ -156,7 +276,7 @@ a:hover {
   font-size: 14px;
 }
 
-[class*="bar"] {
+[class*="-bar"] {
   position: relative;
   height: 4px;
   border-radius: 2px;
@@ -249,6 +369,42 @@ a:hover {
 /* PLAYER SONG */
   .player-song .options ul.h-list {
     flex-wrap: wrap;
+  }
+
+  /* NAVBAR LEFT */
+  .navbar-left {
+    flex-basis: 60px
+  }
+
+  .navbar-left-menu .nav span {
+    display: none;
+  }
+
+  .navbar-left-menu .playlist {
+    display: none;
+  }
+
+  .navbar-left-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-left-user .user {
+    border-top: none;
+  }
+
+  .navbar-left-user span,
+  .navbar-left-user h6 {
+    display: none;
+  }
+
+  .navbar-left-menu .navbar-logo.desktop {
+    display: none;
+  }
+
+  .navbar-left-menu .navbar-logo.mobile {
+    display: block;
   }
 
 }
