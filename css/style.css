@@ -359,7 +359,7 @@ ul.v-list li {
 
 .albums-item.rounded i.fa-ellipsis-v {
   font-size: 24px;
-  left: 80%;
+  left: 100%;
   top: 100%;
 }
 
@@ -422,7 +422,7 @@ ul.v-list li {
   display: flex;
   align-items: center;
   flex-basis: 230px;
-  padding: 20px 10px;
+  padding: 20px 0 20px 10px;
 }
 
 .player-song .song-info {
@@ -500,7 +500,7 @@ ul.v-list li {
 }
 
 .player-song .options ul li {
-  padding-left: 15px;
+  padding-left: 10px;
 }
 
 .player-song .options ul i:active {
@@ -518,7 +518,7 @@ ul.v-list li {
 }
 
 .player-controls a {
-  padding: 0 10px;
+  padding: 0 8px;
 }
 
 .player-controls i {
@@ -528,7 +528,7 @@ ul.v-list li {
 
 .player-controls .play-pause i {
   font-size: 32px;
-  padding: 0 20px;
+  padding: 0 15px;
 }
 
 .player-controls i:hover {
@@ -612,7 +612,6 @@ ul.v-list li {
 .player-volume {
   display: flex;
   justify-content:flex-end;
-  flex-basis: 230px
 }
 
 .player-volume i {
@@ -676,7 +675,7 @@ ul.v-list li {
 
   .player-controls .play-pause i {
     font-size: 32px;
-    padding: 0 10px;
+    padding: 0px 6px;
   }
 
   .player-volume i {
