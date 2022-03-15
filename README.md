@@ -1,16 +1,12 @@
 <p align="center">
- <img src="./img/readme/devices.png" alt="DigitalOcean responsive" title="DigitalOcean responsive" width="550px">
+ <img src="./img/readme/devices.png" alt="Spotify Web" title="Spotify Web" width="550px">
 </p>
 
 <h2 align="center">Spotify Web</h2>
 
-<div align="center">
-
-</div>
-
 ---
 
-<p align="left">Non-working demo of spotify web.</p>
+<p align="center">Non-working demo of Spotify Web-App.</p>
 <br> 
     
 ## ⛏️ Built With <a name = "tech_stack"></a>
